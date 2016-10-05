@@ -12,13 +12,13 @@ app.get('/', function (req, res) {
 
 
 app.get('/artical-one',function(req,res){
-   res.send('THIs is artical one'); 
+   res.send('THIs is artical ONE'); 
 });
 app.get('/artical-two',function(req,res){
-   res.send('THIs is artical one'); 
+   res.send('THIs is artical TWO'); 
 });
 app.get('/artical-three',function(req,res){
-   res.send('THIs is artical one'); 
+   res.send('THIs is artical THREE'); 
 });
 
 
