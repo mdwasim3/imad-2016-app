@@ -14,6 +14,12 @@ app.get('/', function (req, res) {
 app.get('/artical-one',function(req,res){
    res.send('THIs is artical one'); 
 });
+app.get('/artical-two',function(req,res){
+   res.send('THIs is artical one'); 
+});
+app.get('/artical-three',function(req,res){
+   res.send('THIs is artical one'); 
+});
 
 
 app.get('/ui/style.css', function (req, res) {
