@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/artical-one',function(req,res){
-   res.sendFile('THIs is artical one'); 
+   res.send('THIs is artical one'); 
 });
 
 
