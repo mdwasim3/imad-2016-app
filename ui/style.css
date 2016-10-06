@@ -39,3 +39,7 @@ hr {
 	border-style: dashed;
 	border-color: green;
 }
+p {
+	margin-left: 111px;
+	font-style: oblique;
+}
