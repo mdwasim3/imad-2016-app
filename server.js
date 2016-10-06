@@ -4,40 +4,66 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+
+
+// create object
  var articalOne= {
         title: 'Artical One',
+        heading:'Artical  One',
         date: '10 oct 16',
         content: `
-        <table border="1">
-  <tr>
-  <td> hello col 1 and row one </td>
-  <td> hello col 1 row two </td>
-  </tr>
-  
-</table>
-<h3> hello buddy</h3>
-<pre>
-    
-    hello    kuch to bolo.
-</pre>
-<h2>hi this is the color going to change</h2>
-<marquee> hi this is moving </marquee>
-<pre>Hello, it's me
-I was wondering if after all these years you'd like to meet
-To go over everything
-They say that time's supposed to heal ya
-But I ain't done much healing </pre>
-<code>
-Hello, can you hear me?
-I'm in California dreaming about who we used to be
-When we were younger and free
-I've forgotten how it felt before the world fell at our feet</code>
-
-There's such a difference between us
-And a million miles `
+        	<p> This is my first Artical.  THIs is my first artical
+					This is my first Artical.  THIs is my first artical
+					This is my first Artical.  THIs is my first artical
+				</p>
+				<p>
+				This is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first artical
+				</p>
+				<p>
+				This is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first artical..
+				</p>`
      
     
  };
+ 
+ 
+ function createTemplate(data) {
+ var title=data.title;
+ var date=data.date;
+ var heading=data.heading;
+ var content=data.content;
+ 
+ var htmlTemplate= `
+ <html>
+	<head>
+		<title>
+		  ${title}
+		</title>
+		<meta name="viewpoint" content="width=device-width,initial-scale=1" />
+		<link href="/ui/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<div>
+				<a href="/"> Home </a>
+			</div>
+			<hr/>
+			<h3>
+				${heading}
+			</h3>
+			<div>
+				${date}
+			</div>
+			<div>
+			${content}
+			</div>	
+		</div>
+	</body>
+</html>
+  `;
+   return htmlTemplate;
+ }
+ 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -45,7 +71,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/artical-one',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'artical-one.html'));
+   res.send(createTemplate(articalOne));
 });
 app.get('/artical-two',function(req,res){
   res.sendFile(path.join(__dirname, 'ui', 'artical-two.html')); 
