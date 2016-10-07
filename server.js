@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
 
 var articales = {
- 'artical-one' : {
+  articalone: {
         title: 'Artical One',
         heading:'Artical  One',
         date: '10 oct 16',
@@ -27,7 +27,7 @@ var articales = {
     
  },
  
- 'artical-two':{
+ articaltwo :{
       title: 'Artical Two',
         heading:'Artical  Two',
         date: '15 oct 16',
@@ -36,7 +36,7 @@ var articales = {
 				</p>`
  },
   
- 'artical-three' : {
+ articalthree: {
         title: 'Artical Three',
         heading:'Artical  Three',
         date: '20 oct 16',
@@ -83,12 +83,19 @@ var htmlTemplate= `
 
 
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
+
+
 app.get('/:articalName',function(req,res){
     //articalName== artical-one
 //articales[articalName]=={}content object for artical one
 
-var articalName=req.param.articalName;     // this feature comes from expess frame work    
- res.send(createTemplate(articales[articalName]));
+var articalName=req.params.articalName;     // this feature comes from expess frame work    
+ res.send(createTemplate (articales[articalName]));
 });
 
 
@@ -100,9 +107,6 @@ var articalName=req.param.articalName;     // this feature comes from expess fra
 
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
