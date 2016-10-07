@@ -35,12 +35,14 @@ var articalOne= {
 
 var htmlTemplate= `
 	<html>
- 	<head>  <title>  
+ 	<head> 
+ 	<title>  
  			${title}
  			</title>
  			<meta name="viewpoint" content="width=device-width,initial-scale=1" />
  			<link href="/ui/style.css" rel="stylesheet" />
- 			</div>
+ 	</head>
+ <body>
  			<hr/>
  			<h3>
  							${heading}
@@ -51,7 +53,7 @@ var htmlTemplate= `
  			 			<div>
  			 			${content}
  			 			</div>	
- 			 			</div>
+ 			 		
  			 		</body>
  			 		 </html>
  			 		  `;
