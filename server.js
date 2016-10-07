@@ -27,7 +27,7 @@ var articales = {
     
  },
  'artical-two':{
-      title: 'Artical Two   ',
+      title: 'Artical Two',
         heading:'Artical  Two',
         date: '15 oct 16',
         content: `
@@ -35,7 +35,7 @@ var articales = {
 				</p>`
  },
  'artical-three' : {
-     title: 'Artical Three   ',
+     title: 'Artical Three',
         heading:'Artical  Three',
         date: '20 oct 16',
         content: `
