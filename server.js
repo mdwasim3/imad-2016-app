@@ -6,7 +6,9 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articalOne= {
+
+var articales = {
+ 'artical-one': {
         title: 'Artical One',
         heading:'Artical  One',
         date: '10 oct 16',
@@ -22,27 +24,44 @@ var articalOne= {
 				This is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first artical..
 				</p>`
      
-
-
+    
+ },
+ 
+ 'artical-two':{
+      title: 'Artical Two',
+        heading:'Artical  Two',
+        date: '15 oct 16',
+        content: `
+        	<p> THis is the second content of the articles.. !!!
+				</p>`
+ },
+  
+ 'artical-three' : {
+        title: 'Artical Three',
+        heading:'Artical  Three',
+        date: '20 oct 16',
+        content: `
+        	<p> THis is the THird content of the articles.. !!!
+				</p>`
+ }
 };
  
  
  function createTemplate(data) {
  var title=data.title;
- var heading=data.heading;
  var date=data.date;
+ var heading=data.heading;
  var content=data.content;
 
 var htmlTemplate= `
 	<html>
- 	<head> 
- 	<title>  
+ 	<head>  <title>  
  			${title}
  			</title>
  			<meta name="viewpoint" content="width=device-width,initial-scale=1" />
  			<link href="/ui/style.css" rel="stylesheet" />
  	</head>
- <body>
+ 	<body>
  			<hr/>
  			<h3>
  							${heading}
@@ -52,8 +71,8 @@ var htmlTemplate= `
  			 			</div>
  			 			<div>
  			 			${content}
- 			 			</div>	
- 			 		
+
+ 			 			</div>
  			 		</body>
  			 		 </html>
  			 		  `;
@@ -63,16 +82,17 @@ var htmlTemplate= `
 
 
 
-app.get('/artical-one',function(req,res){
- res.send(createTemplate(articalOne));
+app.get('/:articalName',function(req,res){
+    //articalName== artical-one
+//articales[articalName]=={}content object for artical one
+
+var articalName=req.param.articalName;     // this feature comes from expess frame work    
+ res.send(createTemplate(articales[articalName]));
 });
 
-app.get('/artical-two',function(req,res){
- res.sendFile(path.join(__dirname, 'ui', 'artical-two.html')); 
-});
-app.get('/artical-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));
-});
+
+
+
 
 
 
