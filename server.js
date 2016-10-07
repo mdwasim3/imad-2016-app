@@ -94,7 +94,9 @@ app.get('/:articalName',function(req,res){
     //articalName== artical-one
 //articales[articalName]=={}content object for artical one
 
-var articalName=req.params.articalName;     // this feature comes from expess frame work    
+var articalName=req.params.articalName;     // this feature comes from expess frame work  
+
+// this param TAG makes my life hell for few hours
  res.send(createTemplate (articales[articalName]));
 });
 
