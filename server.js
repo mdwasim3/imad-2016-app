@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 
 var articales = {
  'artical-one' : {
-        'title' : 'Artical One',
+        title: 'Artical One',
         heading:'Artical  One',
         date: '10 oct 16',
         content: `
@@ -44,6 +44,7 @@ var articales = {
         	<p> THis is the THird content of the articles.. !!!
 				</p>`
  }
+ 
 };
  
  
@@ -71,7 +72,7 @@ var htmlTemplate= `
  			 			</div>
  			 			<div>
  			 			${content}
-
+ 			 			</div>	
  			 			</div>
  			 		</body>
  			 		 </html>
