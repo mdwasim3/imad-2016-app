@@ -26,6 +26,7 @@ var articales = {
      
     
  },
+ 
  'artical-two':{
       title: 'Artical Two',
         heading:'Artical  Two',
@@ -34,6 +35,7 @@ var articales = {
         	<p> THis is the second content of the articles.. !!!
 				</p>`
  },
+  
  'artical-three' : {
      title: 'Artical Three',
         heading:'Artical  Three',
