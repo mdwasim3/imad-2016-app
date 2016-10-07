@@ -61,7 +61,9 @@ var htmlTemplate= `
 
 
 
-
+app.get('/artical-one',function(req,res){
+ res.send(createTemplate(articalOne));
+});
 
 
 
