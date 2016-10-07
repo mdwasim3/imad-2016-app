@@ -7,7 +7,8 @@ app.use(morgan('combined'));
 
 
 
-var articalOne= {
+var articales = {
+ 'artical-one': {
         title: 'Artical One',
         heading:'Artical  One',
         date: '10 oct 16',
@@ -24,7 +25,24 @@ var articalOne= {
 				</p>`
      
     
- };
+ },
+ 'artical-two':{
+      title: 'Artical Two   ',
+        heading:'Artical  Two',
+        date: '15 oct 16',
+        content: `
+        	<p> THis is the second content of the articles.. !!!
+				</p>`
+ },
+ 'artical-three' : {
+     title: 'Artical Three   ',
+        heading:'Artical  Three',
+        date: '20 oct 16',
+        content: `
+        	<p> THis is the THird content of the articles.. !!!
+				</p>`
+ }
+};
  
  
  function createTemplate(data) {
@@ -61,16 +79,17 @@ var htmlTemplate= `
 
 
 
-app.get('/artical-one',function(req,res){
- res.send(createTemplate(articalOne));
+app.get('/:articalName',function(req,res){
+    //articalName== artical-one
+//articales[articalName]=={}content object for artical one
+
+var articalName=req.param.articalName;     // this feature comes from expess frame work    
+ res.send(createTemplate(articales[articalName]));
 });
 
-app.get('/artical-two',function(req,res){
- res.sendFile(path.join(__dirname, 'ui', 'artical-two.html')); 
-});
-app.get('/artical-three',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'artical-three.html'));
-});
+
+
+
 
 
 
