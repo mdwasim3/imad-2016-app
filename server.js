@@ -37,7 +37,7 @@ var articales = {
  },
   
  'artical-three' : {
-     title: 'Artical Three',
+        title: 'Artical Three',
         heading:'Artical  Three',
         date: '20 oct 16',
         content: `
