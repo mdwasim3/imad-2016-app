@@ -6,7 +6,6 @@ var app = express();
 app.use(morgan('combined'));
 
 
-
 var articalOne= {
         title: 'Artical One',
         heading:'Artical  One',
@@ -23,14 +22,15 @@ var articalOne= {
 				This is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first articalThis is my first Artical.  THIs is my first artical..
 				</p>`
      
-    
- };
+
+
+};
  
  
  function createTemplate(data) {
  var title=data.title;
- var date=data.date;
  var heading=data.heading;
+ var date=data.date;
  var content=data.content;
 
 var htmlTemplate= `
