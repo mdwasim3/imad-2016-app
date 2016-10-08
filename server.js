@@ -87,9 +87,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
-
-
 app.get('/:articalName',function(req,res){
     //articalName== artical-one
 //articales[articalName]=={}content object for artical one
@@ -100,13 +97,9 @@ var articalName=req.params.articalName;     // this feature comes from expess fr
  res.send(createTemplate (articales[articalName]));
 });
 
-
-
-
-
-
-
-
+app.get('/ui/main.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.css'));
+});
 
 
 
