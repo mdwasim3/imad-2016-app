@@ -36,7 +36,7 @@ var articales = {
 				</p>`
  },
   
- 'artical-three' : {
+ 'artical-thre' : {
         title: 'Artical Three',
         heading:'Artical  Three',
         date: '20 oct 16',
