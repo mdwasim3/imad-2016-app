@@ -8,7 +8,7 @@ e.innerHTML="CHANGE HAPPENED";
 
 //image moving function
 
-var image=document.getElementByClassName("img-medium");
+var image=document.getElementByName("img-medium");
 image.onClick = function()
 {
     image.style.marginLeft= "100px" ;
