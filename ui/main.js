@@ -6,6 +6,8 @@ console.log('Loaded!');
 var e=document.getElementById("hello");
 e.innerHTML="CHANGE HAPPENED";
 var marginLeft = 0;
+
+
 var v1 = document.getElementById("myimg");
      v1.onclick = function()
         {
