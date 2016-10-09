@@ -8,6 +8,6 @@ e.innerHTML="CHANGE HAPPENED";
 
 myFunction()
 {
-    document.getElementById("wasim").style.marginLeft = "300px" ;
-};
+    document.getElementById("myimg").style.marginLeft = "300px" ;
+}
  
