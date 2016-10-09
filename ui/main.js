@@ -8,8 +8,7 @@ e.innerHTML="CHANGE HAPPENED";
 
 //image moving function
 
-var image=document.getElementById("wasim");
-image.onClick = function()
-{
-    image.style.marginLeft= "100px" ;
+var img=document.getElementById("wasim");
+img.onClick = function(){
+    img.style.marginLeft= "500px" ;
 }
