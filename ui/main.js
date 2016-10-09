@@ -10,5 +10,5 @@ e.innerHTML="CHANGE HAPPENED";
 
 var img = document.getElementById('wasim');
 img.onClick = function(){
-    img.style.marginLeft= "500px" ;
+    img.style.marginLeft= '500px' ;
 };
