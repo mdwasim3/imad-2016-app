@@ -15,7 +15,7 @@ var v1 = document.getElementById("myimg");
         };
         
      function moveRight(){
-         marginLeft = marginLeft + 5 ;
+         marginLeft = marginLeft + 1 ;
          v1.style.marginLeft = marginLeft + 'px';
      }
  
