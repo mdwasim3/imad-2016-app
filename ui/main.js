@@ -18,4 +18,15 @@ var v1 = document.getElementById("myimg");
          marginLeft = marginLeft + 1 ;
          v1.style.marginLeft = marginLeft + 'px';
      }
+     
+     
+// variable counter 
+    
  
+var counter; 
+var button = document.getElementById('counter');
+button.onclick = function(){
+    counter = counter + 1;
+    var span = document.getElementBYId('count');
+    span.innerHTML = counter.toString();
+};
