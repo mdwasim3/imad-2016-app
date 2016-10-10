@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: white;
     margin-top: 75px;
 }
 
@@ -20,11 +20,4 @@ body {
 
 .img-medium {
     height: 200px;
-}
-
-   h3 {
-	float: left;
-	color: green;
-
-	font-size: 20px;
 }
