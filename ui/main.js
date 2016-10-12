@@ -22,8 +22,8 @@ button.onclick = function() {
 	// Not done yet
 	};
 	// Make the request
-		request.open('GET', 'http://localhost:8080/counter', true);
-		//request.send(null); 
+		httpRequest.open('GET', 'http://localhost:8080/counter', true);
+		httpRequest.send(null); 
 
 
 };
