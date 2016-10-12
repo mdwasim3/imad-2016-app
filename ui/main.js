@@ -23,7 +23,7 @@ button.onclick = function() {
 	};
 	// Make the request
 		request.open('GET', 'http://localhost:8080/counter', true);
-		request.send(null); 
+		//request.send(null); 
 
 
 };
