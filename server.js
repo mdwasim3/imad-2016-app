@@ -108,6 +108,17 @@ var articalName=req.params.articalName;     // this feature comes from expess fr
  res.send(createTemplate (articales[articalName]));
 });
 
+
+var names[];
+app.get('/submit-name', function(req,res) {
+  
+var name = req.query.name;
+names.push(name);
+res.send(JSON.stringify(names));
+
+});
+
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
